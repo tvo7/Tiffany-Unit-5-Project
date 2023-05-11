@@ -1,0 +1,51 @@
+body {
+    font-family: 'DynaPuff', cursive;
+    background-color: #92323C;
+    text-align: center;
+    color: #C3BFD9;
+}
+
+img {
+    width: 400px;
+}
+
+h4 {
+    font-family: 'Forum', cursive;
+    font-size: 20px;
+}
+
+input {
+    background-color: black;
+    width: 100px;
+    border-color: white;
+    color: white;
+    font-family: 'Forum', cursive;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+button {
+    background-color: #3C280D;
+    width: 150px;
+    color: #F84949;
+    font-family: 'Phudu', cursive;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+.answer1{
+display: none;
+}
+.answer2{
+display: none;
+}
+.answer3{
+display: none;
+}
+.answer4{
+display: none;
+}
+.answer5{
+display: none;
+}
