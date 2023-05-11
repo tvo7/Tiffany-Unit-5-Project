@@ -1,0 +1,137 @@
+<!DOCTYPE html> <html><head>
+        <title>Tiffany Unit 5 Project</title>
+        <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Forum&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500&amp;display=swap" rel="stylesheet">
+
+    <style>body {
+    font-family: 'DynaPuff', cursive;
+    background-color: #92323C;
+    text-align: center;
+    color: #C3BFD9;
+}
+
+img {
+    width: 400px;
+}
+
+h4 {
+    font-family: 'Forum', cursive;
+    font-size: 20px;
+}
+
+input {
+    background-color: black;
+    width: 100px;
+    border-color: white;
+    color: white;
+    font-family: 'Forum', cursive;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+button {
+    background-color: #3C280D;
+    width: 150px;
+    color: #F84949;
+    font-family: 'Phudu', cursive;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+.answer1{
+display: none;
+}
+.answer2{
+display: none;
+}
+.answer3{
+display: none;
+}
+.answer4{
+display: none;
+}
+.answer5{
+display: none;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What horror movie character trope would you be?</h1>
+        </div>
+        <div class="questions">
+            <h4>How many horror movies have you watched in your life? </h4>
+            <img src="https://media.tenor.com/EbZizb-aSB8AAAAC/scarymovie-bored.gif" alt="gif with text saying what's your favorite scary movie?"><br>
+            <input class="question-one" placeholder="Type a number" type="text" style="font-size: 20px; height: 20px; width:280px; ">
+
+            <h4>Are you a morning or night person?</h4>
+            <img src="https://cdn.shopify.com/s/files/1/0238/7617/products/MP-2_600x.jpg?v=1631643709" alt="grumpy orange cat named garfield with nightgown with text saying im a morning person"><br>
+            <input class="question-two" placeholder="Enter morning or night. Nothing else." type="text" style="font-size: 17px; height: 20px; width:280px; "><br>
+            <button class="submit" type="button">See your fate</button>
+        </div>
+        <div class="result">
+
+        </div>
+
+        <!--Answer 1-->
+        <div class="answer1">
+            <p>The one who dies first</p>
+            <h4>Well unfortunately you're the first victim in the movie...hopefully your 5 minutes of screentime were a good one!</h4>
+            <img src="https://filmschoolrejects.com/wp-content/uploads/2022/09/Friday-13th-2.png" alt="alice from friday the 13th">
+        </div>
+
+        <!-- Answer 2-->
+        <div class="answer2">
+            <p>Comic Relief</p>
+            <h4>You're probably the fan favorite in the movie. People like you a lot, probably even more than the main character. Hopefully you survive, because you got a lot of people rooting for you.</h4>
+            <img src="https://media4.giphy.com/media/26xBSB6fE2tthBeWQ/giphy.gif" alt="gif with text saying we might be comic relief">
+        </div>
+        <!--Answer 3-->
+        <div class="answer3">
+            <p>The killer</p>
+            <h4>Well, it turns out you were the main villain all along. You are a walking red flag. Nothing else to say.</h4>
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/220512183726-07-friday-the-13th-jason.jpg?c=16x9&amp;q=h_720,w_1280,c_fill" alt="jason vorhees">
+        </div>
+        <!--Answer 4-->
+        <div class="answer4">
+            <p>The final person</p>
+            <h4>Wow, congratulations you survived the movie! It's not always a good thing though because you will be traumatized at the end. Still, at least you made it right?</h4>
+            <img src="https://blogscdn.thehut.net/app/uploads/sites/39/2019/09/READY-FB_1569576577.jpg" alt="grace from ready or not">
+        </div>
+<!--Answer 5-->
+            <div class="answer5">
+                <p>Some side character</p>
+                <h4>Well you decided to be funny and put in something that didn't answer the question. There's your role, you're just some side character no one cares about that died offscreen. At least the person who died first had some impact in the movie.</h4>
+                <img src="https://images.squarespace-cdn.com/content/v1/55c50b46e4b0d9f7e7fe0588/1518465117358-25W4ML88JWNKG71Z48VX/My-Name-Is-Irrelevant.png" alt="name tag saying hello my name is irrelevant">
+            </div>
+       
+
+    
+<script>
+/*__POPCODESTART__*/
+var submitButton = document.querySelector(".submit");
+var result = document.querySelector(".result");
+var image = document.querySelector(".image");
+var answer1 = document.querySelector(".answer1");
+var answer2 = document.querySelector(".answer2");
+var answer3 = document.querySelector(".answer3");
+var answer4 = document.querySelector(".answer4");
+var answer5 = document.querySelector(".answer5");
+
+submitButton.onclick = function () {
+  var questionOneinput = document.querySelector(".question-one").value;
+  var questionTwoinput = document.querySelector(".question-two").value;
+
+  if (questionOneinput <= 3 && questionTwoinput === "Morning") {
+    answer1.style.display = "block";
+  } else if (questionOneinput <= 3 && questionTwoinput === "Night") {
+    answer3.style.display = "block";
+  } else if (questionOneinput > 4 && questionTwoinput === "Morning") {
+    answer2.style.display = "block";
+  } else if (questionOneinput > 4 && questionTwoinput === "Night") {
+    answer4.style.display = "block";
+  } else {
+    answer5.style.display = "block";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInN1Ym1pdEJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsInJlc3VsdCIsImltYWdlIiwiYW5zd2VyMSIsImFuc3dlcjIiLCJhbnN3ZXIzIiwiYW5zd2VyNCIsImFuc3dlcjUiLCJvbmNsaWNrIiwicXVlc3Rpb25PbmVpbnB1dCIsInZhbHVlIiwicXVlc3Rpb25Ud29pbnB1dCIsInN0eWxlIiwiZGlzcGxheSJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsWUFBWSxHQUFHQyxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBbkI7QUFDQSxJQUFJQyxNQUFNLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFiO0FBQ0EsSUFBSUUsS0FBSyxHQUFHSCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBWjtBQUNBLElBQUlHLE9BQU8sR0FBR0osUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQWQ7QUFDQSxJQUFJSSxPQUFPLEdBQUdMLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixDQUFkO0FBQ0EsSUFBSUssT0FBTyxHQUFHTixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsVUFBdkIsQ0FBZDtBQUNBLElBQUlNLE9BQU8sR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLFVBQXZCLENBQWQ7QUFDQSxJQUFJTyxPQUFPLEdBQUdSLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixVQUF2QixDQUFkOztBQUVBRixZQUFZLENBQUNVLE9BQWIsR0FBdUIsWUFBVztBQUNqQyxNQUFJQyxnQkFBZ0IsR0FBR1YsUUFBUSxDQUFDQyxhQUFULENBQXVCLGVBQXZCLEVBQXdDVSxLQUEvRDtBQUNJLE1BQUlDLGdCQUFnQixHQUFHWixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsZUFBdkIsRUFBd0NVLEtBQS9EOztBQUNELE1BQUlELGdCQUFnQixJQUFJLENBQXBCLElBQXlCRSxnQkFBZ0IsS0FBSyxTQUFsRCxFQUE0RDtBQUN4RFIsSUFBQUEsT0FBTyxDQUFDUyxLQUFSLENBQWNDLE9BQWQsR0FBd0IsT0FBeEI7QUFDSCxHQUZELE1BRU8sSUFBSUosZ0JBQWdCLElBQUcsQ0FBbkIsSUFBd0JFLGdCQUFnQixLQUFLLE9BQWpELEVBQXlEO0FBQzVETixJQUFBQSxPQUFPLENBQUNPLEtBQVIsQ0FBY0MsT0FBZCxHQUF3QixPQUF4QjtBQUNILEdBRk0sTUFFQSxJQUFJSixnQkFBZ0IsR0FBRSxDQUFsQixJQUF1QkUsZ0JBQWdCLEtBQUssU0FBaEQsRUFBMEQ7QUFDN0RQLElBQUFBLE9BQU8sQ0FBQ1EsS0FBUixDQUFjQyxPQUFkLEdBQXdCLE9BQXhCO0FBQ0gsR0FGTSxNQUVBLElBQUlKLGdCQUFnQixHQUFFLENBQWxCLElBQXVCRSxnQkFBZ0IsS0FBSyxPQUFoRCxFQUF3RDtBQUMvREwsSUFBQUEsT0FBTyxDQUFDTSxLQUFSLENBQWNDLE9BQWQsR0FBd0IsT0FBeEI7QUFDQyxHQUZNLE1BRUE7QUFDUE4sSUFBQUEsT0FBTyxDQUFDSyxLQUFSLENBQWNDLE9BQWQsR0FBd0IsT0FBeEI7QUFDQztBQUNKLENBZEQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgc3VibWl0QnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5zdWJtaXRcIik7XG5sZXQgcmVzdWx0ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIik7XG5sZXQgaW1hZ2UgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmltYWdlXCIpO1xubGV0IGFuc3dlcjEgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmFuc3dlcjFcIik7XG5sZXQgYW5zd2VyMiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYW5zd2VyMlwiKTtcbmxldCBhbnN3ZXIzID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5hbnN3ZXIzXCIpO1xubGV0IGFuc3dlcjQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmFuc3dlcjRcIik7XG5sZXQgYW5zd2VyNSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYW5zd2VyNVwiKTtcblxuc3VibWl0QnV0dG9uLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcbiBsZXQgcXVlc3Rpb25PbmVpbnB1dCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24tb25lXCIpLnZhbHVlO1xuICAgICBsZXQgcXVlc3Rpb25Ud29pbnB1dCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucXVlc3Rpb24tdHdvXCIpLnZhbHVlO1xuICAgIGlmIChxdWVzdGlvbk9uZWlucHV0IDw9IDMgJiYgcXVlc3Rpb25Ud29pbnB1dCA9PT0gXCJNb3JuaW5nXCIpe1xuICAgICAgICBhbnN3ZXIxLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfSBlbHNlIGlmIChxdWVzdGlvbk9uZWlucHV0IDw9MyAmJiBxdWVzdGlvblR3b2lucHV0ID09PSBcIk5pZ2h0XCIpe1xuICAgICAgICBhbnN3ZXIzLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfSBlbHNlIGlmIChxdWVzdGlvbk9uZWlucHV0ID40ICYmIHF1ZXN0aW9uVHdvaW5wdXQgPT09IFwiTW9ybmluZ1wiKXtcbiAgICAgICAgYW5zd2VyMi5zdHlsZS5kaXNwbGF5ID0gXCJibG9ja1wiO1xuICAgIH0gZWxzZSBpZiAocXVlc3Rpb25PbmVpbnB1dCA+NCAmJiBxdWVzdGlvblR3b2lucHV0ID09PSBcIk5pZ2h0XCIpe1xuICAgIGFuc3dlcjQuc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbiAgICB9IGVsc2Uge1xuICAgIGFuc3dlcjUuc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbiAgICB9XG59OyJdfQ==</script></body></html>
